@@ -299,3 +299,5 @@ Espero que esto sea lo que necesitabas.
 
 1. Usar la orientacion a objetos para mejorar el codigo.
 2. Usar test para realizar algunos test.
+
+![Changelog de cambios](public/images/Test.png)
