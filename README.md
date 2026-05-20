@@ -4,6 +4,8 @@
 
 - **[Guía completa del proyecto](GUIA_COMPLETA_PROYECTO.md)** — instalación, cómo revisar funcionalidades, panel de administración, **WSL**, `sqlite3` y comandos útiles.
 
+**Sobre algunas carpetas:** la aplicación principal está en la raíz (`src/`). La carpeta **`repositorio/`** es una **copia de referencia** (snapshot paralelo que también está en este repo). La carpeta **`coverage/`**, si la generas con `npm run test:coverage`, **no se sube a Git**: es resultado local de tests (HTML/JavaScript generado).
+
 ## Arranque en local
 
 1. **Clonar** el repositorio e ir a la carpeta del proyecto.

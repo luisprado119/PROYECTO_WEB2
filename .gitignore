@@ -6,7 +6,7 @@
 .pnp.js
 .yarn/install-state.gz
 
-# testing
+# testing (generado con `npm run test:coverage` — no subir)
 /coverage
 
 # next.js
@@ -37,8 +37,11 @@ yarn-error.log*
 .design-active
 src_backup_original/
 src_stitch_design/
-repositorio/
 stitch/
+
+# Copia paralela antigua del proyecto (`repositorio/`): sí se versiona el código,
+# pero no el .git interno (evita repo dentro del repo).
+repositorio/.git/
 
 # vercel
 .vercel
