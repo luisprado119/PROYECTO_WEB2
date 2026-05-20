@@ -1,0 +1,309 @@
+/* =============================================
+   DISEÑO STITCH — "Precision Commerce"
+   Activar con: npm run design:stitch
+   Basado en: Google Stitch / Material You
+   Paleta: Azul corporativo (#004ac6) + Naranja CTA (#fd651e)
+   ============================================= */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts — Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  /* ---- STITCH: Variables shadcn mapeadas al sistema Material You de Stitch ---- */
+  :root {
+    /* Fondo principal: blanco azulado muy suave (#faf8ff) */
+    --background: 250 100% 99%;
+    --foreground: 227 41% 13%;
+
+    /* Cards: blanco puro */
+    --card: 0 0% 100%;
+    --card-foreground: 227 41% 13%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 227 41% 13%;
+
+    /* Primary: Azul corporativo Stitch #004ac6 */
+    --primary: 220 100% 39%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Naranja CTA Stitch #a73a00 */
+    --secondary: 21 100% 33%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted: surface-container #eaedff */
+    --muted: 234 100% 95%;
+    --muted-foreground: 229 12% 30%;
+
+    /* Accent: surface-container-high #e2e7ff */
+    --accent: 229 100% 94%;
+    --accent-foreground: 220 100% 39%;
+
+    /* Destructive */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Border: outline-variant #c3c6d7 */
+    --border: 231 14% 80%;
+    /* Input */
+    --input: 231 14% 80%;
+    /* Ring: primary */
+    --ring: 220 100% 39%;
+
+    /* Charts: paleta Stitch multicolor */
+    --chart-1: 220 100% 39%;
+    --chart-2: 21 100% 33%;
+    --chart-3: 213 20% 35%;
+    --chart-4: 38 88% 55%;
+    --chart-5: 0 72% 51%;
+
+    /* Border radius: 8px (Stitch usa 0.5rem) */
+    --radius: 0.5rem;
+
+    /* Stitch extra tokens disponibles como CSS vars */
+    --stitch-surface: #faf8ff;
+    --stitch-surface-dim: #d2d9f4;
+    --stitch-surface-low: #f2f3ff;
+    --stitch-surface-container: #eaedff;
+    --stitch-surface-high: #e2e7ff;
+    --stitch-surface-highest: #dae2fd;
+    --stitch-on-surface: #131b2e;
+    --stitch-on-surface-variant: #434655;
+    --stitch-outline: #737686;
+    --stitch-outline-variant: #c3c6d7;
+    --stitch-primary: #004ac6;
+    --stitch-primary-container: #2563eb;
+    --stitch-primary-fixed: #dbe1ff;
+    --stitch-secondary: #a73a00;
+    --stitch-secondary-container: #fd651e;
+    --stitch-inverse-surface: #283044;
+    --stitch-inverse-on-surface: #eef0ff;
+  }
+
+  /* ---- Dark mode Stitch — surface oscura + azul brillante ---- */
+  .dark {
+    /* Fondo oscuro con ligero tinte azul (inverse-surface) */
+    --background: 220 24% 18%;
+    --foreground: 234 100% 96%;
+
+    --card: 225 24% 15%;
+    --card-foreground: 234 100% 96%;
+
+    --popover: 225 24% 15%;
+    --popover-foreground: 234 100% 96%;
+
+    /* Primary claro en dark: inverse-primary #b4c5ff */
+    --primary: 226 100% 85%;
+    --primary-foreground: 220 100% 15%;
+
+    /* Secondary claro en dark */
+    --secondary: 21 100% 80%;
+    --secondary-foreground: 21 100% 10%;
+
+    --muted: 225 18% 22%;
+    --muted-foreground: 231 14% 60%;
+
+    --accent: 225 18% 25%;
+    --accent-foreground: 226 100% 85%;
+
+    --destructive: 0 62% 48%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 225 18% 28%;
+    --input: 225 18% 28%;
+    --ring: 226 100% 85%;
+
+    --chart-1: 220 70% 60%;
+    --chart-2: 21 80% 65%;
+    --chart-3: 160 55% 50%;
+    --chart-4: 38 80% 60%;
+    --chart-5: 340 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  /* ---- Stitch: Estilos base mejorados ---- */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  /* Smooth focus rings al estilo Stitch */
+  :focus-visible {
+    outline: 2px solid var(--stitch-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius);
+  }
+}
+
+/* ---- Stitch: Clases utilitarias extra ---- */
+@layer utilities {
+  /* Superficies Stitch */
+  .stitch-surface          { background-color: var(--stitch-surface); }
+  .stitch-surface-low      { background-color: var(--stitch-surface-low); }
+  .stitch-surface-container{ background-color: var(--stitch-surface-container); }
+
+  /* Cards estilo Stitch: borde suave + sombra level-2 */
+  .stitch-card {
+    background-color: #ffffff;
+    border: 1px solid var(--stitch-outline-variant);
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .stitch-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+    transform: translateY(-2px);
+  }
+
+  /* Botón primario estilo Stitch */
+  .stitch-btn-primary {
+    background-color: var(--stitch-primary);
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: filter 0.15s ease, transform 0.1s ease;
+  }
+  .stitch-btn-primary:hover  { filter: brightness(1.1); }
+  .stitch-btn-primary:active { transform: scale(0.96); }
+
+  /* Botón CTA naranja estilo Stitch */
+  .stitch-btn-cta {
+    background-color: var(--stitch-secondary-container);
+    color: #ffffff;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    transition: filter 0.15s ease, transform 0.1s ease;
+  }
+  .stitch-btn-cta:hover  { filter: brightness(1.08); }
+  .stitch-btn-cta:active { transform: scale(0.96); }
+
+  /* Barra de búsqueda Stitch */
+  .stitch-search-bar {
+    height: 48px;
+    background: #ffffff;
+    border: 1px solid var(--stitch-outline-variant);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.2s ease;
+  }
+  .stitch-search-bar:focus-within {
+    box-shadow: 0 0 0 2px var(--stitch-primary);
+  }
+
+  /* Badge de categoría / estado */
+  .stitch-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 10px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: var(--stitch-surface-container);
+    color: var(--stitch-on-surface);
+  }
+  .stitch-badge-primary {
+    background-color: var(--stitch-primary-fixed);
+    color: var(--stitch-primary);
+  }
+  .stitch-badge-cta {
+    background-color: #fff0e8;
+    color: var(--stitch-secondary);
+  }
+
+  /* Input Stitch */
+  .stitch-input {
+    height: 48px;
+    background: #ffffff;
+    border: 1px solid var(--stitch-outline-variant);
+    border-radius: 0.5rem;
+    padding: 0 16px;
+    font-size: 16px;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    outline: none;
+  }
+  .stitch-input:focus {
+    border-color: var(--stitch-primary);
+    box-shadow: 0 0 0 2px rgba(0, 74, 198, 0.15);
+  }
+
+  /* Sidebar admin estilo Stitch: dark slate */
+  .stitch-admin-sidebar {
+    background-color: #1e293b;
+    color: #f1f5f9;
+    width: 260px;
+    min-height: 100vh;
+  }
+
+  /* Precio destacado */
+  .stitch-price {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--stitch-on-surface);
+    line-height: 1;
+  }
+
+  /* Header Stitch: sticky con sombra al scroll */
+  .stitch-header {
+    background: var(--stitch-surface);
+    border-bottom: 1px solid var(--stitch-outline-variant);
+    height: 72px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+  .stitch-header-scrolled {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Producto — imagen placeholder gradiente */
+  .stitch-product-img-placeholder {
+    background: linear-gradient(135deg, var(--stitch-surface-container) 0%, var(--stitch-primary-fixed) 100%);
+    aspect-ratio: 1 / 1;
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+
+  /* Tabla admin Stitch */
+  .stitch-table th {
+    background-color: var(--stitch-surface-low);
+    color: var(--stitch-on-surface-variant);
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 10px 16px;
+  }
+  .stitch-table td {
+    padding: 14px 16px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--stitch-outline-variant);
+  }
+  .stitch-table tr:last-child td {
+    border-bottom: none;
+  }
+  .stitch-table tbody tr:hover {
+    background-color: var(--stitch-surface-low);
+    cursor: pointer;
+  }
+}
