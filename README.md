@@ -1,5 +1,7 @@
 # Proyecto fin de WEB 2
 
+![Home](public/images/Home.png)
+
 ## Documentación
 
 - **[Guía completa del proyecto](GUIA_COMPLETA_PROYECTO.md)** — instalación, cómo revisar funcionalidades, panel de administración, **WSL**, `sqlite3` y comandos útiles.
@@ -102,6 +104,8 @@ Se trata de hacer una web que presente unos productos, permita al usuario selecc
 
 ### 2. Catálogo de Productos
 
+![Catálogo de productos](public/images/Catalogo.png)
+
 #### 2.1 Listado de Productos
 - Desarrollar página que muestre todos los productos disponibles.
 
@@ -110,6 +114,8 @@ Se trata de hacer una web que presente unos productos, permita al usuario selecc
 - Permitir especificar cantidad deseada.
 
 ### 3. Gestión del Carrito de Compras
+
+![Cesta de la compra](public/images/Cesta.png)
 
 #### 3.1 Funcionalidad del Carrito
 - Agregar productos con cantidades especificadas.
@@ -123,6 +129,8 @@ Se trata de hacer una web que presente unos productos, permita al usuario selecc
 - Eliminar productos si la cantidad se establece en 0.
 
 ### 4. Proceso de Pedido
+
+![Pedidos del cliente](public/images/Orders.png)
 
 #### 4.1 Confirmación del Pedido
 - Permitir confirmación del contenido del carrito.
@@ -219,6 +227,8 @@ CREATE TABLE IF NOT EXISTS activity_log (
 
 ## Panel de gestión comercio (`/admin`)
 
+![Panel de comercio](public/images/Comercio.png)
+
 Área **Nivel 2 — perfil comercio** implementada con Next.js (App Router), JWT con `role`, y gráficos con **Recharts**.
 
 ### Acceso y permisos
@@ -284,6 +294,8 @@ Los usuarios con permisos de gestor podrán:
 
 Espero que esto sea lo que necesitabas.
 ### Nivel 3. Refactoring 
+
+![Changelog de cambios](public/images/Cambios.png)
 
 1. Usar la orientacion a objetos para mejorar el codigo.
 2. Usar test para realizar algunos test.
