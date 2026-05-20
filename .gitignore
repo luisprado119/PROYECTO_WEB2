@@ -33,12 +33,9 @@ yarn-error.log*
 
 # northwind.db se versiona a propósito (plantilla + datos del proyecto). No añadir *.db aquí.
 
-# Artefactos editor / clones de diseño locales (no entregables)
+# Artefactos editor / otros (no código del proyecto principal)
 .design-active
-src_backup_original/
-src_stitch_design/
 stitch/
-
 # Copia paralela antigua del proyecto (`repositorio/`): sí se versiona el código,
 # pero no el .git interno (evita repo dentro del repo).
 repositorio/.git/

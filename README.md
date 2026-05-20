@@ -4,7 +4,7 @@
 
 - **[Guía completa del proyecto](GUIA_COMPLETA_PROYECTO.md)** — instalación, cómo revisar funcionalidades, panel de administración, **WSL**, `sqlite3` y comandos útiles.
 
-**Sobre algunas carpetas:** la aplicación principal está en la raíz (`src/`). La carpeta **`repositorio/`** es una **copia de referencia** (snapshot paralelo que también está en este repo). La carpeta **`coverage/`**, si la generas con `npm run test:coverage`, **no se sube a Git**: es resultado local de tests (HTML/JavaScript generado).
+**Sobre algunas carpetas:** la aplicación principal está en la raíz (`src/`). La carpeta **`repositorio/`** es una **copia de referencia** (snapshot paralelo que también está en este repo). Las carpetas **`src_backup_original/`** y **`src_stitch_design/`** son respaldos de diseño / código anterior. La carpeta **`coverage/`**, si la generas con `npm run test:coverage`, **no se sube a Git**: es resultado local de tests (HTML/JavaScript generado).
 
 ## Arranque en local
 
